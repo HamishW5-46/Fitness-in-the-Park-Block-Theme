@@ -1,0 +1,523 @@
+/*
+Theme Name: Fitness in the Park
+Theme URI: https://fitnessinthepark.com.au/
+Author: Fitness in the Park
+Description: A bespoke block theme for a modern personal training and outdoor group fitness business.
+Version: 1.1.0
+Requires at least: 6.6
+Tested up to: 6.8
+Requires PHP: 8.0
+Text Domain: fitness-in-the-park
+*/
+
+:root {
+	--fitp-radius: 7px;
+	--fitp-video-radius: 25px;
+	--fitp-shadow: 0 18px 48px rgba(58, 18, 48, 0.13);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-underline-offset: 0.2em;
+}
+
+.wp-site-blocks {
+	overflow-x: clip;
+}
+
+.fitp-site-header {
+	backdrop-filter: blur(18px);
+	border-bottom: 1px solid rgba(196, 26, 138, 0.1);
+	position: sticky;
+	top: 0;
+	z-index: 20;
+}
+
+.admin-bar .fitp-site-header {
+	top: 32px;
+}
+
+.fitp-header-logo,
+.fitp-footer-logo {
+	margin: 0;
+}
+
+.fitp-header-logo img {
+	display: block;
+	height: 54px;
+	object-fit: contain;
+	object-position: left center;
+}
+
+.fitp-footer-logo {
+	background: var(--wp--preset--color--surface);
+	border-radius: var(--fitp-radius);
+	display: inline-block;
+	padding: 0.65rem 0.85rem;
+}
+
+.fitp-footer-logo img {
+	display: block;
+}
+
+.fitp-eyebrow,
+.fitp-card-label {
+	color: var(--wp--preset--color--accent);
+	font-size: 0.75rem;
+	font-weight: 800;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+.fitp-eyebrow-light,
+.fitp-card-label {
+	color: #ffd8ef;
+}
+
+.fitp-hero-image .wp-block-cover__background {
+	background: linear-gradient(90deg, rgba(58, 18, 48, 0.88) 0%, rgba(58, 18, 48, 0.62) 30%, rgba(58, 18, 48, 0.08) 62%), linear-gradient(0deg, rgba(32, 12, 28, 0.54) 0%, transparent 48%);
+	opacity: 1;
+}
+
+.fitp-hero-image .wp-block-cover__image-background {
+	object-position: center center;
+}
+
+.fitp-hero-copy {
+	margin-left: auto;
+	margin-right: auto;
+	text-shadow: 0 2px 18px rgba(32, 12, 28, 0.38);
+}
+
+.fitp-hero-copy h1 {
+	max-width: 14ch;
+}
+
+.fitp-hero-copy > p {
+	max-width: 37rem;
+}
+
+.fitp-intro-media img {
+	aspect-ratio: 1 / 1;
+	border-radius: var(--fitp-radius);
+	box-shadow: var(--fitp-shadow);
+	display: block;
+	object-fit: cover;
+	object-position: center 44%;
+	width: 100%;
+}
+
+.fitp-service-grid > .wp-block-column {
+	min-width: 0;
+}
+
+.fitp-photo-card {
+	border-radius: var(--fitp-radius);
+	box-shadow: 0 14px 36px rgba(58, 18, 48, 0.12);
+	overflow: hidden;
+	transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.fitp-photo-card:hover {
+	box-shadow: 0 20px 44px rgba(58, 18, 48, 0.2);
+	transform: translateY(-3px);
+}
+
+.fitp-photo-card .wp-block-cover__background {
+	background: linear-gradient(180deg, rgba(58, 18, 48, 0.04) 20%, rgba(58, 18, 48, 0.88) 100%);
+	opacity: 1;
+}
+
+.fitp-photo-card .wp-block-cover__inner-container {
+	padding: 1.5rem;
+}
+
+.fitp-photo-card h3,
+.fitp-photo-card p {
+	margin-bottom: 0.7rem;
+	margin-top: 0;
+}
+
+.fitp-card-link {
+	font-weight: 750;
+}
+
+.fitp-card-link a {
+	color: inherit;
+}
+
+.fitp-video-grid {
+	align-items: flex-start;
+}
+
+.fitp-session-video {
+	background: var(--wp--preset--color--contrast);
+	border-radius: var(--fitp-video-radius);
+	box-shadow: var(--fitp-shadow);
+	margin: 0;
+	overflow: hidden;
+}
+
+.fitp-session-video video {
+	aspect-ratio: 406 / 720;
+	display: block;
+	object-fit: cover;
+	width: 100%;
+}
+
+.fitp-testimonial,
+.fitp-detail-card,
+.fitp-service-card {
+	border: 1px solid rgba(196, 26, 138, 0.13);
+	border-radius: var(--fitp-radius);
+	height: 100%;
+}
+
+.fitp-testimonial {
+	box-shadow: 0 12px 30px rgba(58, 18, 48, 0.07);
+}
+
+.fitp-testimonial cite {
+	color: var(--wp--preset--color--accent);
+	font-style: normal;
+	font-weight: 800;
+}
+
+.fitp-service-card {
+	transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.fitp-service-card:hover {
+	border-color: rgba(196, 26, 138, 0.42);
+	box-shadow: var(--fitp-shadow);
+	transform: translateY(-3px);
+}
+
+.fitp-number {
+	align-items: center;
+	background: var(--wp--preset--color--accent);
+	border-radius: 50%;
+	color: var(--wp--preset--color--surface);
+	display: inline-flex;
+	font-size: 0.85rem;
+	font-weight: 800;
+	height: 2.25rem;
+	justify-content: center;
+	width: 2.25rem;
+}
+
+.fitp-rounded img {
+	border-radius: var(--fitp-radius);
+}
+
+.fitp-final-cta {
+	background-image: radial-gradient(circle at 15% 30%, rgba(196, 26, 138, 0.28), transparent 28%), radial-gradient(circle at 85% 72%, rgba(108, 184, 63, 0.2), transparent 30%);
+}
+
+.fitp-site-footer a {
+	color: inherit;
+}
+
+.wp-block-button__link {
+	box-shadow: none;
+	transition: background-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.wp-block-button__link:hover {
+	box-shadow: 0 10px 24px rgba(58, 18, 48, 0.18);
+	transform: translateY(-1px);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	border-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--accent);
+}
+
+.wp-block-navigation-item__content:hover {
+	color: var(--wp--preset--color--accent);
+}
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	background: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+	padding: var(--wp--preset--spacing--50);
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+	gap: 1.1rem;
+}
+
+@media (max-width: 900px) {
+	.fitp-service-grid {
+		flex-wrap: wrap !important;
+	}
+
+	.fitp-service-grid > .wp-block-column {
+		flex-basis: calc(50% - 0.75rem) !important;
+	}
+
+	.fitp-service-grid > .wp-block-column:last-child {
+		flex-basis: 100% !important;
+	}
+
+	.fitp-service-grid > .wp-block-column:last-child .fitp-photo-card {
+		min-height: 380px !important;
+	}
+}
+
+@media (max-width: 782px) {
+	.admin-bar .fitp-site-header {
+		top: 46px;
+	}
+
+	.fitp-hero-image {
+		min-height: 620px !important;
+	}
+
+	.fitp-hero-image .wp-block-cover__background {
+		background: linear-gradient(0deg, rgba(58, 18, 48, 0.9) 0%, rgba(58, 18, 48, 0.5) 54%, rgba(58, 18, 48, 0.06) 100%);
+	}
+
+	.fitp-hero-image .wp-block-cover__image-background {
+		object-position: right center;
+	}
+
+	.fitp-hero-copy h1 {
+		font-size: clamp(2.25rem, 11vw, 3.5rem);
+	}
+
+	.fitp-intro-media img {
+		aspect-ratio: 4 / 3;
+	}
+
+	.fitp-service-grid > .wp-block-column {
+		flex-basis: 100% !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.fitp-header-logo img {
+		height: 45px;
+		width: 108px !important;
+	}
+
+	.fitp-photo-card {
+		min-height: 420px !important;
+	}
+}
+
+/* =================
+    CONTACT FORM
+   ===============*/
+.fitp-contact-form {
+  width: min(100%, 640px);
+  max-width: 640px;
+  margin: 2.5rem auto 3.5rem;
+  padding: 1.75rem;
+  border: 1px solid var(--fitp-border);
+  border-radius: var(--fitp-radius-lg);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(251, 248, 252, 0.92)),
+    radial-gradient(circle at top left, rgba(196, 48, 154, 0.11), transparent 38%);
+  box-shadow: var(--fitp-shadow-card);
+}
+
+.fitp-contact-form__intro {
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.fitp-contact-form__intro .fitp-eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.fitp-contact-form__intro h2 {
+  margin: 0 0 0.6rem;
+  color: var(--fitp-pink);
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  line-height: 1.15;
+}
+
+.fitp-contact-form__intro p:last-child {
+  max-width: 520px;
+  margin: 0 auto;
+  color: var(--fitp-muted);
+  line-height: 1.65;
+}
+
+.fitp-contact-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.fitp-contact-form__field {
+  margin-bottom: 1rem;
+}
+
+.fitp-contact-form__field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--fitp-text);
+  font-weight: 700;
+}
+
+.fitp-contact-form__field input,
+.fitp-contact-form__field textarea,
+.fitp-contact-form__field select {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 0.78rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--fitp-text);
+  font-size: 1rem;
+  line-height: 1.45;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.fitp-contact-form__field textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.fitp-contact-form__field input:focus,
+.fitp-contact-form__field textarea:focus,
+.fitp-contact-form__field select:focus {
+  outline: none;
+  border-color: var(--fitp-pink);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(196, 48, 154, 0.13);
+}
+
+.fitp-contact-form__turnstile {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 65px;
+  margin: 0.5rem 0 1rem;
+}
+
+.fitp-contact-form__turnstile > div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.fitp-contact-form__turnstile iframe {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.fitp-contact-form__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.3rem;
+}
+
+.fitp-contact-form__actions .fitp-button {
+  display: inline-grid;
+  place-items: center;
+  min-width: 190px;
+  min-height: 48px;
+  line-height: 1;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.fitp-contact-form__button-text {
+  display: block;
+  line-height: 1;
+}
+
+.fitp-contact-form__actions .fitp-button:disabled {
+  opacity: 0.68;
+  cursor: wait;
+  transform: none;
+}
+
+.fitp-contact-form__status {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--fitp-radius-md);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.fitp-contact-form__status.is-success {
+  display: block;
+  background: #eaf7e2;
+  border: 1px solid rgba(108, 184, 63, 0.35);
+  color: #285d17;
+}
+
+.fitp-contact-form__status.is-error {
+  display: block;
+  background: #ffe6f5;
+  border: 1px solid rgba(196, 48, 154, 0.25);
+  color: var(--fitp-pink-deep);
+}
+
+.fitp-contact-form__honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .fitp-contact-form {
+    margin-top: 1.7rem;
+    padding: 1.35rem;
+    border-radius: 20px;
+  }
+
+  .fitp-contact-form__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .fitp-contact-form__actions .fitp-button {
+    width: 100%;
+  }
+}
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	position: fixed !important;
+	inset: 0 !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+
+	width: 100vw !important;
+	height: 100dvh !important;
+	max-width: none !important;
+	max-height: none !important;
+
+	z-index: 999999 !important;
+}
