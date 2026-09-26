@@ -194,6 +194,7 @@
 		}
 	},
 	"styles": {
+		"css": "main { margin-block-start: 0 !important; }",
 		"color": {
 			"background": "var:preset|color|base",
 			"text": "var:preset|color|contrast"
@@ -263,6 +264,13 @@
 			}
 		},
 		"blocks": {
+			"core/template-part": {
+				"spacing": {
+					"margin": {
+						"top": "0px"
+					}
+				}
+			},
 			"core/navigation": {
 				"typography": {
 					"fontSize": "0.92rem",

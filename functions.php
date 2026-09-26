@@ -38,3 +38,6 @@ function fitp_enqueue_styles() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'fitp_enqueue_styles' );
+
+require_once get_theme_file_path( '/inc/woocommerce.php' );
+require_once get_theme_file_path( '/inc/ptminder.php' );

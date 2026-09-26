@@ -1,0 +1,261 @@
+/**
+ * PTminder booking and client login presentation.
+ */
+
+.fitp-page-heading {
+	border-bottom: 1px solid rgba(196, 26, 138, 0.09);
+}
+
+.fitp-page-heading .fitp-eyebrow,
+.fitp-page-heading .wp-block-post-title {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.fitp-page-heading .fitp-eyebrow {
+	margin-bottom: 0.65rem;
+}
+
+/* PTminder adds 100px of grey space above the scheduler and 20px below it. */
+.fitp-bookings-content,
+.fitp-bookings-content > .wp-block-shortcode {
+	margin: 0;
+}
+
+.fitp-bookings-embed {
+	--fitp-bookings-document-height: 1245px;
+	--fitp-bookings-visible-height: 1125px;
+	background: var(--wp--preset--color--surface);
+	height: var(--fitp-bookings-visible-height);
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.fitp-bookings-iframe {
+	border: 0;
+	display: block;
+	filter: brightness(1.1) saturate(0.92);
+	height: var(--fitp-bookings-document-height);
+	margin: -100px 0 -20px;
+	max-width: none;
+	width: 100%;
+}
+
+/* Client login */
+.fitp-client-login-page {
+	background: var(--wp--preset--color--base);
+}
+
+.fitp-client-login-card {
+	background: var(--wp--preset--color--surface);
+	border: 1px solid rgba(58, 18, 48, 0.14);
+	border-radius: var(--fitp-radius);
+	box-shadow: var(--fitp-shadow);
+	padding: clamp(1.5rem, 5vw, 2.75rem);
+}
+
+.fitp-client-login-form {
+	min-height: 19rem;
+	width: 100%;
+}
+
+#ptminder-client-login-form {
+	color: var(--wp--preset--color--contrast);
+	font-family: var(--wp--preset--font-family--body) !important;
+	font-size: 1rem;
+	width: 100% !important;
+}
+
+#ptminder-client-login-form > div:first-child,
+#ptminder-client-login-form > div:nth-child(2) {
+	margin-bottom: 1rem;
+}
+
+#ptminder-client-login-form label {
+	color: var(--wp--preset--color--contrast);
+	font-family: inherit !important;
+	font-size: 0.92rem !important;
+	font-weight: 700;
+}
+
+#ptminder-login-email,
+#ptminder-login-password {
+	appearance: none;
+	background: var(--wp--preset--color--surface) !important;
+	border: 1px solid rgba(58, 18, 48, 0.24) !important;
+	border-radius: var(--fitp-radius) !important;
+	box-shadow: none;
+	color: var(--wp--preset--color--contrast);
+	font-family: inherit !important;
+	font-size: 1rem !important;
+	line-height: 1.4;
+	min-height: 3rem;
+	padding: 0.75rem 0.9rem !important;
+	transition: border-color 150ms ease, box-shadow 150ms ease;
+	width: 100% !important;
+}
+
+#ptminder-login-email:focus,
+#ptminder-login-password:focus {
+	border-color: var(--wp--preset--color--accent) !important;
+	box-shadow: 0 0 0 4px rgba(196, 26, 138, 0.13);
+	outline: none;
+}
+
+#ptminder-client-login-form > div:nth-child(4) {
+	display: grid !important;
+	grid-template-columns: auto 1fr auto;
+	margin-top: 1.25rem !important;
+	overflow: visible !important;
+	row-gap: 0.9rem;
+}
+
+#ptminder-client-login-form > div:nth-child(4) br,
+#ptminder-client-login-form > div:nth-child(4) > span {
+	display: none !important;
+}
+
+#ptminder-client-signin-button {
+	appearance: none;
+	background: var(--wp--preset--color--accent) !important;
+	border: 0 !important;
+	border-radius: 999px !important;
+	color: var(--wp--preset--color--surface) !important;
+	cursor: pointer;
+	float: none !important;
+	font-family: inherit !important;
+	font-size: 0.95rem !important;
+	font-weight: 750;
+	grid-column: 1 / -1;
+	grid-row: 1;
+	min-height: 3rem;
+	padding: 0.75rem 1.25rem !important;
+	transition: background 150ms ease, transform 150ms ease;
+	width: 100%;
+}
+
+#ptminder-client-signin-button:hover {
+	background: #a91477 !important;
+	transform: translateY(-1px);
+}
+
+#ptminder-client-signin-button:focus-visible {
+	box-shadow: 0 0 0 4px rgba(196, 26, 138, 0.18);
+	outline: 2px solid var(--wp--preset--color--accent);
+	outline-offset: 2px;
+}
+
+#ptminder-client-keep-logged-checkbox {
+	accent-color: var(--wp--preset--color--accent);
+	align-self: center;
+	float: none !important;
+	grid-column: 1;
+	grid-row: 2;
+	height: 1.1rem;
+	margin: 0 0.55rem 0 0 !important;
+	width: 1.1rem;
+}
+
+#ptminder-client-keep-logged-checkbox + label {
+	align-self: center;
+	float: none !important;
+	grid-column: 2 / -1;
+	grid-row: 2;
+	margin: 0 !important;
+	min-width: 0 !important;
+}
+
+#ptminder-client-signup-button,
+#ptminder-client-forgot-password-button {
+	color: var(--wp--preset--color--moss) !important;
+	float: none !important;
+	font-family: inherit !important;
+	font-size: 0.9rem !important;
+	height: auto !important;
+	margin: 0 !important;
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+#ptminder-client-signup-button {
+	grid-column: 1 / 3;
+	grid-row: 3;
+}
+
+#ptminder-client-forgot-password-button {
+	grid-column: 3;
+	grid-row: 3;
+}
+
+#ptminder-client-redirect-link {
+	float: none !important;
+	grid-column: 1 / -1;
+	grid-row: 4;
+	margin: 0 !important;
+	padding: 0.85rem 1rem !important;
+	text-align: center;
+}
+
+#ptminder-client-login-error-field {
+	background: #fff0f5 !important;
+	border: 1px solid rgba(180, 35, 24, 0.22);
+	border-radius: var(--fitp-radius) !important;
+	color: #8f1e16 !important;
+	font-size: 0.9rem !important;
+	margin-top: 0.75rem !important;
+	padding: 0.75rem 0.85rem !important;
+}
+
+#pt-multiselect-client-wrap {
+	border: 1px solid rgba(58, 18, 48, 0.14);
+	border-radius: var(--fitp-radius);
+	padding: 1rem;
+}
+
+@media (max-width: 1100px) and (min-width: 769px) {
+	.fitp-bookings-embed {
+		--fitp-bookings-document-height: 1286px;
+		--fitp-bookings-visible-height: 1166px;
+	}
+}
+
+@media (max-width: 768px) {
+	.fitp-bookings-embed {
+		--fitp-bookings-document-height: 2134px;
+		--fitp-bookings-visible-height: 2014px;
+	}
+}
+
+@media (max-width: 480px) {
+	.fitp-bookings-embed {
+		--fitp-bookings-document-height: 2165px;
+		--fitp-bookings-visible-height: 2045px;
+	}
+
+	.fitp-client-login-content {
+		padding-bottom: var(--wp--preset--spacing--60) !important;
+		padding-top: var(--wp--preset--spacing--50) !important;
+	}
+
+	.fitp-client-login-card {
+		padding: 1.25rem;
+	}
+
+	#ptminder-client-signup-button,
+	#ptminder-client-forgot-password-button {
+		grid-column: 1 / -1;
+	}
+
+	#ptminder-client-signup-button {
+		grid-row: 3;
+	}
+
+	#ptminder-client-forgot-password-button {
+		grid-row: 4;
+	}
+
+	#ptminder-client-redirect-link {
+		grid-row: 5;
+	}
+}

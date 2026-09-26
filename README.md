@@ -4,6 +4,10 @@ A bespoke WordPress block theme for Fitness in the Park, a personal training and
 
 The theme is built for the WordPress Site Editor using native Gutenberg blocks and contains no Custom HTML blocks. It uses the established Fitness in the Park colour palette, logo, photography and session videos in a responsive, modern layout.
 
+WooCommerce support is included for the shop, product categories and tags, product search, single products, cart, checkout, order confirmation and customer account pages. Store templates use native WooCommerce and Gutenberg blocks, with theme-specific styling in `assets/css/woocommerce.css`.
+
+PTminder integrations use the `[fitp_bookings]` and `[fitp_client_login]` shortcodes, with responsive presentation in `assets/css/ptminder.css` and dedicated block templates for both pages.
+
 ## Theme Structure
 
 - `wp-content/themes/fitness-in-the-park/` - custom block theme.
